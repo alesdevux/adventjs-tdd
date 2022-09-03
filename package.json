@@ -1,0 +1,20 @@
+{
+  "name": "adventjs-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "aleswebgit",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "vitest": "0.22.1"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
