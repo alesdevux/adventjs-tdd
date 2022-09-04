@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { countSheeps } from '../src/count-sheeps'
+import { countSheeps, sheeps } from '../src/count-sheeps'
 
 describe('countSheeps', () => {
   it('should be a function', () => {
@@ -14,5 +14,9 @@ describe('countSheeps', () => {
     expect(() => countSheeps('asf')).toThrow()
     expect(() => countSheeps(1)).toThrow()
     expect(() => countSheeps({})).toThrow()
+  })
+
+  it('should return an array', () => {
+    expect(Array.isArray(countSheeps(sheeps))).toBe(true)
   })
 })

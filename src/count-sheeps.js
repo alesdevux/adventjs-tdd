@@ -10,4 +10,6 @@ export const sheeps = [
 export const countSheeps = (sheeps) => {
   if (!sheeps) throw new Error('Missing sheeps')
   if (!Array.isArray(sheeps)) throw new Error('Sheeps must be an array')
+
+  return sheeps
 }
