@@ -15,4 +15,8 @@ describe('listGifts', () => {
     expect(() => listGifts({})).toThrow()
     expect(() => listGifts([])).toThrow()
   })
+
+  it('should return an object', () => {
+    expect(typeof listGifts('tdd')).toBe('object')
+  })
 })
