@@ -11,7 +11,8 @@ export const countSheeps = (sheeps) => {
   if (!sheeps) throw new Error('Missing sheeps')
   if (!Array.isArray(sheeps)) throw new Error('Sheeps must be an array')
 
-  const sheepsFiltered = sheeps.filter(sheep => sheep.color === 'rojo')
+  let sheepsFiltered = sheeps.filter(sheep => sheep.color === 'rojo')
+  sheepsFiltered = sheepsFiltered.filter(sheep => sheep.name.includes('a') && sheep.name.includes('n'))
 
   return sheepsFiltered
 }

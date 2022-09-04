@@ -22,7 +22,11 @@ describe('countSheeps', () => {
 
   it('should return only sheeps with red color', () => {
     const sheepsWithRedColor = countSheeps(sheeps)
-    expect(sheepsWithRedColor.length).toBe(5)
     expect(sheepsWithRedColor.every(s => s.color === 'rojo')).toBe(true)
+  })
+
+  it('should return only sheeps with name contain "a" and "n"', () => {
+    const sheepsWithAN = countSheeps(sheeps)
+    expect(sheepsWithAN.every(s => s.name.includes('a') && s.name.includes('n'))).toBe(true)
   })
 })
