@@ -12,7 +12,7 @@ export const countSheeps = (sheeps) => {
   if (!Array.isArray(sheeps)) throw new Error('Sheeps must be an array')
 
   let sheepsFiltered = sheeps.filter(sheep => sheep.color === 'rojo')
-  sheepsFiltered = sheepsFiltered.filter(sheep => sheep.name.includes('a') && sheep.name.includes('n'))
+  sheepsFiltered = sheepsFiltered.filter(sheep => sheep.name.toLowerCase().includes('a') && sheep.name.toLowerCase().includes('n'))
 
   return sheepsFiltered
 }

@@ -25,13 +25,13 @@ describe('countSheeps', () => {
     expect(sheepsWithRedColor.every(s => s.color === 'rojo')).toBe(true)
   })
 
-  it('should return only sheeps with name contain "a" and "n"', () => {
+  it('should return only sheeps with name contain "a" and "n" (lowercase or uppercase)', () => {
     const sheepsWithAN = countSheeps(sheeps)
-    expect(sheepsWithAN.every(s => s.name.includes('a') && s.name.includes('n'))).toBe(true)
+    expect(sheepsWithAN.every(s => s.name.toLowerCase().includes('a') && s.name.toLowerCase().includes('n'))).toBe(true)
   })
 
-  it('should return only sheeps with red color and name contain "a" and "n"', () => {
+  it('should return only sheeps with red color and name contain "a" and "n" (lowercase or uppercase)', () => {
     const sheepsWithRedColorAndAN = countSheeps(sheeps)
-    expect(sheepsWithRedColorAndAN.every(s => s.color === 'rojo' && s.name.includes('a') && s.name.includes('n'))).toBe(true)
+    expect(sheepsWithRedColorAndAN.every(s => s.color === 'rojo' && s.name.toLowerCase().includes('a') && s.name.toLowerCase().includes('n'))).toBe(true)
   })
 })
