@@ -9,4 +9,10 @@ describe('listGifts', () => {
   it('should throw if parameter is missing', () => {
     expect(() => listGifts()).toThrow()
   })
+
+  it('should throw if parameter is not a string', () => {
+    expect(() => listGifts(1)).toThrow()
+    expect(() => listGifts({})).toThrow()
+    expect(() => listGifts([])).toThrow()
+  })
 })
