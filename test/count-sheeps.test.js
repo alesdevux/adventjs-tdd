@@ -5,4 +5,8 @@ describe('countSheeps', () => {
   it('should be a function', () => {
     expect(typeof countSheeps).toBe('function')
   })
+
+  it('should throw if first parameter is missing', () => {
+    expect(() => countSheeps()).toThrow()
+  })
 })
