@@ -6,7 +6,13 @@ describe('countSheeps', () => {
     expect(typeof countSheeps).toBe('function')
   })
 
-  it('should throw if first parameter is missing', () => {
+  it('should throw if parameter is missing', () => {
     expect(() => countSheeps()).toThrow()
+  })
+
+  it('should throw if parameter is not an array', () => {
+    expect(() => countSheeps('asf')).toThrow()
+    expect(() => countSheeps(1)).toThrow()
+    expect(() => countSheeps({})).toThrow()
   })
 })
