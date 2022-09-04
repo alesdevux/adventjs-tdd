@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { letter, listGifts } from '../src/list-gifts'
+import { letter, letterWithSpaces, listGifts } from '../src/list-gifts'
 
 describe('listGifts', () => {
   it('should be a function', () => {
@@ -22,5 +22,9 @@ describe('listGifts', () => {
 
   it('should delete word after "_" and return an object with the number of times each gift appears in the string', () => {
     expect(listGifts(letter)).toEqual({ bici: 2, coche: 2, balón: 1, peluche: 1 })
+  })
+
+  it('should delete empty spaces', () => {
+    expect(listGifts(letterWithSpaces)).toEqual({ bici: 2, coche: 2, balón: 1, peluche: 1 })
   })
 })

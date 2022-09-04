@@ -1,5 +1,5 @@
 export const letter = 'bici coche balón _playstation bici coche peluche'
-// export const letter = 'bici coche balón _playstation    bici coche peluche'
+export const letterWithSpaces = 'bici coche balón _playstation    bici coche peluche'
 
 export const listGifts = (letter) => {
   if (!letter) throw new Error('Missing parameter: letter')
@@ -10,6 +10,7 @@ export const listGifts = (letter) => {
 
   gifts.forEach((gift) => {
     if (gift[0] === '_') return
+    if (!gift[0]) return
     giftsCount[gift] ? giftsCount[gift]++ : (giftsCount[gift] = 1)
   })
 
