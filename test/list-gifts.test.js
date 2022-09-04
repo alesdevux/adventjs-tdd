@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { listGifts } from '../src/list-gifts'
+import { letter, listGifts } from '../src/list-gifts'
 
 describe('listGifts', () => {
   it('should be a function', () => {
@@ -18,5 +18,15 @@ describe('listGifts', () => {
 
   it('should return an object', () => {
     expect(typeof listGifts('tdd')).toBe('object')
+  })
+
+  it('should return an object with the number of times each gift appears in the string', () => {
+    expect(listGifts(letter)).toEqual({
+      bici: 2,
+      coche: 2,
+      balón: 1,
+      _playstation: 1,
+      peluche: 1
+    })
   })
 })
