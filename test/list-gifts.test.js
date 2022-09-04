@@ -20,13 +20,7 @@ describe('listGifts', () => {
     expect(typeof listGifts('tdd')).toBe('object')
   })
 
-  it('should return an object with the number of times each gift appears in the string', () => {
-    expect(listGifts(letter)).toEqual({
-      bici: 2,
-      coche: 2,
-      balón: 1,
-      _playstation: 1,
-      peluche: 1
-    })
+  it('should delete word after "_" and return an object with the number of times each gift appears in the string', () => {
+    expect(listGifts(letter)).toEqual({ bici: 2, coche: 2, balón: 1, peluche: 1 })
   })
 })

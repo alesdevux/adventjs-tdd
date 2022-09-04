@@ -9,6 +9,7 @@ export const listGifts = (letter) => {
   const giftsCount = {}
 
   gifts.forEach((gift) => {
+    if (gift[0] === '_') return
     giftsCount[gift] ? giftsCount[gift]++ : (giftsCount[gift] = 1)
   })
 
